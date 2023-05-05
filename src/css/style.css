@@ -1,0 +1,306 @@
+main {
+    display: grid;    
+    grid-template-areas: 
+    "card-imc classificacao"
+    "card-imc descricao";
+    grid-template-columns: 500px minmax(auto, 725px);
+    grid-template-rows: auto auto;
+    column-gap: 37px;
+
+    margin: 100px 57px 0 120px;
+}
+
+.card-imc {
+    display: inline-block;
+
+    display: grid;
+    grid-template-areas: 
+    "altura-e-peso botoes"
+    "resultado resultado";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-area: card-imc;
+    
+
+    width: 500px;
+    height: 800px;
+
+    border-radius: 25px;
+    border: 1px solid #0C5BD1;
+
+    background-color: #fff;
+}
+
+.card-imc .inputs-altura-peso {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    grid-area: altura-e-peso;
+    
+
+    width: 170px;
+    height: 300px;
+
+    margin: 85px 0 0 65px;
+
+}
+
+.card-imc .inputs-altura-peso .nome {
+    font-size: 32px;
+    font-weight: 400;
+    
+    color: #1745BB;
+    
+}
+
+.card-imc .inputs-altura-peso .input-altura, .input-peso {
+    line-height: 42px;
+    
+}
+
+.card-imc .inputs-altura-peso .inputs-dentro {
+    width: 150px;
+    height: 50px;
+
+    border-radius: 15px;
+    border: none;
+    outline: none;
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.267);
+
+    padding-left:  15px;
+
+    background-color: #D9D9D9;
+
+    font-size: 18px;
+}
+
+.card-imc .inputs-altura-peso .inputs-dentro:focus {
+    background-color: #d6d5d5;
+}
+
+.card-imc .botoes {
+    grid-area: botoes;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 180px;
+    height: 145px;
+
+    margin: 215px 39px 0 0;
+}
+
+.card-imc .botoes .botoes-dentro {
+    width: 100%;
+    height: 55px;
+
+    border-radius: 20px;
+    border: none;
+
+    font-size: 28px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.card-imc .botoes .botoes-dentro:hover {
+    transform: scale(0.9);
+}
+
+.card-imc .botoes .botoes-dentro:nth-child(1) {
+    background-color: #FF8310;
+    color: #FFFFFF;
+}
+
+.card-imc .botoes .botoes-dentro:nth-last-child(1) {
+    background-color: #4DE566;
+    color: #FFFFFF;
+}
+
+
+
+.card-imc .resultado {
+    grid-area: resultado;
+
+    background-color: #FF8310;
+
+    display: flex;
+    align-items: center;
+
+    width: 381px;
+    height: 110px;
+
+    margin: 105px 93px 0 26px;
+    padding-left: 22px;
+
+    border-radius: 25px;
+
+    color: #FFFFFF;
+    font-size: 40px;
+}
+
+.classificacao {
+    grid-area: classificacao;
+
+    height: 395px;
+    width: 720px;
+}
+
+.classificacao .tabela-imc {
+    background-color: #FFFFFF;
+
+    text-align: center;
+    font-size: 16px;
+
+    width: 720px;
+    height: 395px;
+
+    border: 1px solid #0C5BD1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    
+}
+
+.classificacao .tabela-imc tr th {
+    font-size: 20px;
+}
+
+.descricao {
+    grid-area: descricao;
+
+    margin-top: 61px;
+}
+
+.descricao p {
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.descricao span {
+    color: #FF8310;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    margin-top: 15px;
+    
+    color: #fff;
+}
+
+@media(max-width: 1370px){
+    main {
+       margin: 0;
+
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .card-imc {
+        margin: 55px 0 100px 0;
+
+        height: 680px;
+    }
+
+    .classificacao  {
+        margin: 0 0 100px 0;
+    }
+
+    .descricao {
+        margin: 0 142px 0 127px;
+    }
+}
+
+@media(max-width: 768px) {
+    .descricao {
+        margin: 0 50px 0 50px;
+    }
+}
+
+@media(max-width: 700px) {
+    .card-imc {
+        width: 350px;
+        height: 466px;
+
+        margin-bottom: 30px;
+
+        display: flex;
+        flex-direction: column;
+
+        display: grid;
+        grid-template-areas: 
+        "altura-e-peso botoes"
+        "resultado resultado";
+        grid-template-columns: 148px;
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .card-imc .inputs-altura-peso {
+        margin: 47px 0 0 39px;
+
+        width: 105px;
+        height: 207px;
+    }
+    
+    .card-imc .inputs-altura-peso .nome {
+        font-size: 24px;
+
+        margin-bottom: 12px;
+    }
+
+    .card-imc .inputs-altura-peso .inputs-dentro {
+        width: 105px;
+        height: 50px;
+    }
+
+    .card-imc .botoes {
+        width: 150px;
+        height: 197px;
+
+        margin: 56px 0 0 24px;
+    }
+
+    .card-imc .botoes .botoes-dentro {
+        width: 150px;
+        height: 36px;
+
+        font-size: 20px;
+    }
+
+    .card-imc .resultado {
+        margin: 50px 58px 31px 59px;
+        padding: 14px 15px;
+
+        font-size: 32px;
+
+        width: 213px;
+        height: 131px;
+    }
+
+
+    .classificacao {
+        display: none;
+    }
+
+    .descricao {
+        margin: 0 15px 0 15px;
+    }
+
+    .descricao p {
+        font-size: 18px;
+    }
+
+    .rodape {
+        font-size: 12px;
+    }
+}

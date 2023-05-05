@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+</head>
+<body>
+    <main>
+
+        <div class="card-imc">
+
+                <div class="inputs-altura-peso">
+                    <div class="input-altura">
+                        <label id="altura-nome" for="altura" class="nome">ALTURA</label>
+                        <input id="altura" type="number", class="inputs-dentro" placeholder="EX: 1,72">
+                    </div>
+
+                    <div class="input-peso">
+                        <label id="peso-nome" for="peso" class="nome">PESO</label>
+                        <input id="peso" type="number", class="inputs-dentro" placeholder="EX: 62,30">
+                    </div>
+                </div>
+                
+                <div class="botoes">
+                    <button id="botao-calcular" class="botoes-dentro" onclick="calcular()">CALCULAR</button>
+
+                    <button id="botao-limpar" type="reset" class="botoes-dentro" onclick="limpar()">LIMPAR</button>
+                </div>
+
+            <div class="resultado" id="mostrar-na-tela">
+                <p>SEU IMC:</p>
+            </div>
+
+        </div>
+
+        <section class="classificacao">
+            <table class="tabela-imc">
+                <tr>
+                    <th>IMC</th>
+                    <th>CLASSIFICAÇÃO</th>
+                    <th>GRAU DE OBESIDADE</th>
+                </tr>
+
+                <tr>
+                    <td>MENOR QUE 18,5</td>
+                    <td>MAGREZA</td>
+                </tr>
+                <tr>               
+                    <td>ENTRE 18,5 E 24,9</td>
+                    <td>NORMAL</td>
+                </tr>
+                <tr>
+                    <td>ENTRE 25,0 E  29,9</td>
+                    <td>SOBREPESO</td>
+                    <td>GRAU I</td>
+                </tr>
+                <tr>
+                    <td>ENTRE 30,0 E  39,9</td>
+                    <td>OBESIDADE</td>
+                    <td>GRAU II</td>
+                </tr>
+                <tr>
+                    <td>MAIOR QUE 40,0</td>
+                    <td>OBESIDADE MORBIDA</td>
+                    <td>GRAU III</td>
+                </tr>
+            </table>
+        </section>
+
+        <div class="descricao">
+            <p>
+                IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.
+                O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.
+                <span>Importante: siga os exemplos e use pontos como separadores.</span>
+            </p>
+        </div>
+
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2023 - Desing and Code by Luis Fernando.</p>
+    </footer>
+
+    <script src="src/js/index.js"></script>
+</body>
+</html>
